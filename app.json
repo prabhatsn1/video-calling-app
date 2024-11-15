@@ -4,7 +4,7 @@
     "slug": "video-calling-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/videoCalling.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -15,13 +15,14 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.prabhatsn1.videocallingapp",
+      "icon": "./assets/images/videoCalling.png",
       "infoPlist": {
         "NSCameraUsageDescription": "This app requires access to the camera to take photos and videos for live calls.",
         "NSMicrophoneUsageDescription": "This app requires access to the microphone to record audio for live calls."
       },
       "android": {
         "adaptiveIcon": {
-          "foregroundImage": "./assets/images/adaptive-icon.png",
+          "foregroundImage": "./assets/images/videoCalling.png",
           "backgroundColor": "#ffffff"
         },
         "permissions": [
@@ -33,11 +34,10 @@
       "web": {
         "bundler": "metro",
         "output": "static",
-        "favicon": "./assets/images/favicon.png"
+        "favicon": "./assets/images/videoCalling.png"
       },
       "plugins": [
         "expo-router",
-        "expo-build-properties",
         "@stream-io/video-react-native-sdk",
         [
           "@config-plugins/react-native-webrtc",
@@ -49,10 +49,7 @@
         [
           "react-native-permissions",
           {
-            "iosPermissions": [
-              "Camera",
-              "Microphone"
-            ]
+            "iosPermissions": ["Camera", "Microphone"]
           }
         ],
         [
@@ -81,8 +78,6 @@
     "android": {
       "package": "com.prabhatsn1.videocallingapp"
     },
-    "plugins": [
-      "expo-router"
-    ]
+    "plugins": ["expo-router", "expo-build-properties"]
   }
 }
